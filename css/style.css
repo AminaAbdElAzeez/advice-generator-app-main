@@ -1,0 +1,108 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Advice Section */
+.advice-item {
+    background-color: var(--darkBlue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-item .container {
+    width: 350px;
+    background-color: var(--darkGrayishBlue);
+    padding: 35px 50px 100px 40px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+
+.advice-item .container .advice-item-title {
+    text-transform: uppercase;
+    color: var(--neonGreen);
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+.advice-item .container .advice-item-desc {
+    color: var(--lightCyan);
+}
+
+.advice-item .container .advice-item-desc + svg {
+    position: absolute;
+    bottom: 55px;
+    left: 22px;
+}
+
+.advice-item .container .last-icon {
+    position: absolute;
+    bottom: -28px;
+    left: 145px;
+    background-color: var(--neonGreen);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -ms-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+}
+
+.advice-item .container .last-icon:hover {
+    box-shadow: 1px 3px 60px 25px var(--neonGreen);
+}
+
+@media screen and (max-width: 400px) {
+    .advice-item {
+        width: 375px;
+    }
+    .advice-item .container {
+        width: 300px;
+        padding: 35px 35px 100px 40px;
+    }
+    .advice-item .container .advice-item-desc{
+        font-size: 18px;
+    }
+    .advice-item .container .advice-item-desc + svg {
+        left: 4px;
+    }
+    .advice-item .container .last-icon {
+        left: 130px;
+    }
+}
